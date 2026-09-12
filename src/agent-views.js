@@ -9,7 +9,7 @@ function portalLayout(agent, title, body) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} - Agent portal - ${esc(config.business.name)}</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="nav keep-links">${brand('/portal', 'Media', '<span class="portal-tag">Agent portal</span>')}
 <nav><a href="/portal">My properties</a><a href="/portal/branding">Branding</a><a href="/portal/logout">Log out</a></nav></header>
@@ -27,7 +27,7 @@ function login(error, next = '') {
   const booking = next.startsWith('/book');
   const signupHref = '/portal/signup' + (next ? '?next=' + encodeURIComponent(next) : '');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent login - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<title>Agent login - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="auth-head">${brand('/', 'Media')}</header>
 <main class="auth-main"><div class="auth-card">
@@ -53,7 +53,7 @@ function signup(state = {}, values = {}, next = '') {
   else if (state.unavailable) notice = '<div class="notice bad">We could not create an account with those details. If you already have an account, <a href="/portal/login">sign in</a> or use <a href="/portal/recover">account recovery</a>.</div>';
   else if (state.errors && state.errors.length) notice = '<div class="notice bad">' + state.errors.map(esc).join(' ') + '</div>';
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Create account - Agent portal - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<title>Create account - Agent portal - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="auth-head">${brand('/', 'Media')}</header>
 <main class="auth-main"><div class="auth-card">
@@ -195,7 +195,7 @@ function orderDetail(agent, order, files, opts = {}) {
 // Shared locked page for direct hits on original file URLs before payment.
 function deliveryLocked(order, fileCount) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Delivery locked - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<title>Delivery locked - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="auth-head">${brand('/', 'Media')}</header><main class="auth-main"><div class="auth-card">
 <p class="eyebrow">${esc(order.id)}</p><h1>Payment first,<br>then originals.</h1>
@@ -383,7 +383,7 @@ function propertySite(order, files, agent, opts = {}) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(order.property.address)}${unbranded ? '' : ' - ' + esc(config.business.name)}</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body class="psite">
 ${hero ? `<section class="psite-hero" style="background-image:linear-gradient(rgba(12,14,12,.1),rgba(12,14,12,.55)),url('/sitefiles/${order.site_token}/${encodeURIComponent(hero)}')">
@@ -413,7 +413,7 @@ ${unbranded ? '' : `<footer class="psite-credit"><span class="psite-credit-mark"
 
 function siteUnavailable() {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Property website - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<title>Property website - ${esc(config.business.name)}</title><link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="auth-head">${brand('/', 'Media')}</header><main class="auth-main"><div class="auth-card"><h1>Not live yet</h1><p class="muted">This property website is not published yet. Check back after the media is delivered.</p></div></main></body></html>`;
 }

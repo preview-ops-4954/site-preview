@@ -266,3 +266,4 @@ input[type=file]::file-selector-button:hover{background:var(--accent);border-col
   .attention{grid-template-columns:1fr}.attention>.eyebrow{padding:1rem 0}.attention a{border-left:0;border-top:1px solid var(--line);padding:1rem 0}
 }
 @media(min-width:801px){.booking-form .picks{grid-template-columns:1fr 1fr}.booking-form .pick{grid-template-columns:auto minmax(0,1fr) auto;column-gap:.65rem;padding-right:.75rem}.booking-form .pick span.muted{grid-column:2}.booking-form .pick .price{grid-column:3;grid-row:1 / span 2;align-self:start;margin:0;white-space:nowrap}}
+@media(min-width:801px){.booking-submit{position:static}.booking-form .picks{grid-template-columns:1fr 1fr 1fr}.booking-form .pick{grid-template-columns:auto minmax(0,1fr);padding-right:1.25rem}.booking-form .pick span.muted{grid-column:2}.booking-form .pick .price{grid-column:2;grid-row:auto;margin:.2rem 0 0}}

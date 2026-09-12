@@ -8,7 +8,7 @@ function adminLayout(title, body, user = null) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} - JWRE Admin</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260912i">
+<link rel="stylesheet" href="/static/styles.css?v=20260912j">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg"></head>
 <body><header class="nav keep-links">${v.brand('/admin', 'Studio')}
 <nav><a href="/admin">Jobs</a><a href="/admin/shoots">Shoots</a><a href="/admin/clients">Clients</a><a href="/admin/catalog">Services</a><a href="/admin/billing">Billing</a>${user && user.role === 'owner' ? '<a href="/admin/team">Team</a>' : ''}<a href="/" target="_blank">View site</a><a href="/admin/logout">Log out</a></nav></header>
