@@ -46,7 +46,7 @@ function layout(title, body, opts = {}) {
 <meta property="og:description" content="${esc(config.business.tagline)}. Serving ${esc(config.business.area)}.">
 <meta property="og:image" content="__ORIGIN__/static/portfolio/front-hero.jpg">
 <title>${esc(title)} - ${esc(config.business.name)}</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260912h">
+<link rel="stylesheet" href="/static/styles.css?v=20260912i">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 </head>
 <body>
