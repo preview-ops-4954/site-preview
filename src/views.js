@@ -46,7 +46,7 @@ function layout(title, body, opts = {}) {
 <meta property="og:description" content="${esc(config.business.tagline)}. Serving ${esc(config.business.area)}.">
 <meta property="og:image" content="__ORIGIN__/static/portfolio/front-hero.jpg">
 <title>${esc(title)} - ${esc(config.business.name)}</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260912d">
+<link rel="stylesheet" href="/static/styles.css?v=20260912h">
 <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 </head>
 <body>
@@ -219,7 +219,8 @@ function bookForm(selectedPackage, errors = {}, values = {}, agent = null, catal
     </label>`).join('');
   const err = k => errors[k] ? `<div class="field-err">${esc(errors[k])}</div>` : '';
   return layout('Book a shoot', `
-<section class="section narrow">
+<section class="section booking-page">
+  <div class="booking-intro">
   <p class="eyebrow">Request a session</p>
   <h1>Tell us about<br>the property.</h1>
   <div class="strip inset small">
@@ -228,7 +229,9 @@ function bookForm(selectedPackage, errors = {}, values = {}, agent = null, catal
     ${img('thumb-front-hero.jpg', 'Farmhouse front elevation')}
   </div>
   <div class="notice">We confirm the exact quote before your shoot. No charge is made today.</div>
-  <form method="post" action="/book" class="form">
+  <div class="booking-promises" aria-label="Booking steps"><span><b>01</b> Choose services</span><span><b>02</b> Pick a window</span><span><b>03</b> We confirm</span></div>
+  </div>
+  <form method="post" action="/book" class="form booking-form">
     <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <h2>Property</h2>
     <label>Street address *<input name="address" value="${v('address')}" required>${err('address')}</label>
@@ -258,8 +261,7 @@ function bookForm(selectedPackage, errors = {}, values = {}, agent = null, catal
       <label>Phone<input name="phone" value="${v('phone')}"></label>
     </div>`}
     <label>Notes (gate codes, lockbox, must-have shots)<textarea name="notes" rows="3">${v('notes')}</textarea></label>
-    <button class="btn block" type="submit">Place booking request</button>
-    <p class="muted">Payment happens after we confirm your quote - nothing is charged now.</p>
+    <div class="booking-submit"><div><span class="eyebrow">Next step</span><strong>Review and send your request</strong><small>Nothing is charged today.</small></div><button class="btn" type="submit">Place booking request</button></div>
   </form>
 </section>`);
 }
