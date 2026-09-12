@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#fbfaf7"/>
+  <rect x="3.5" y="3.5" width="57" height="57" fill="none" stroke="#171714" stroke-width="3.5"/>
+  <text x="33" y="45" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="35" letter-spacing="-1.5"><tspan font-style="italic" fill="#5f6758">J</tspan><tspan fill="#171714">W</tspan></text>
+</svg>

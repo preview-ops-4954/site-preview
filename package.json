@@ -1,0 +1,23 @@
+{
+  "name": "jwre-media",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JWRE Media - real estate photography marketing site, ordering, and operations MVP",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node --test",
+    "migrate": "node db/migrate.js",
+    "import:json": "node scripts/import-json.js",
+    "backup": "node scripts/backup.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.4"
+  }
+}
